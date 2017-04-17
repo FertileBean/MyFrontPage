@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alain Lou</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#AboutMe" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Me</a>
+    <a href="#Portfolio" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Portfolio</a>
+    <a href="#Contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Let's Connect</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+  	<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+   	<a href="#AboutMe" class="w3-bar-item w3-button w3-padding-large">About Me</a>
+   	<a href="#Portfolio" class="w3-bar-item w3-button w3-padding-large">Portfolio</a>
+   	<a href="#Contact" class="w3-bar-item w3-button w3-padding-large">Let's Connect</a>
+  </div>
+</div>
+	
+<!-- Header -->
+<header class="w3-container w3-center" style="padding:128px 16px">
+<script src="https://use.fontawesome.com/d48c98f5f6.js"></script>
+  	<h1 class="w3-margin w3-jumbo" id="MyName">Alain Lou</h1>
+  	<a class="w3-button w3-black w3-padding-large w3-large w3-margin-top" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">This Button is Useless</a>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container"  id="AboutMe">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>About Me</h1>
+      <h5 class="w3-padding-32">Hey there! I'm Alain, a grade 11 student at the University of Toronto Schools. I have interests in competitive programming, urban design, and I love all kinds of music. I'm glad to see you're checking out my site.</h5>
+      <p class="w3-text-grey">My mom once told me: "When you stop dreaming, either you're dead or you're not living." It's with that mentality that I live my life. I always try to think that there are better roads ahead, and I put myself out there. I've had a ton more failures than I've had successes, and I think that I'll continue to have more failures.  </p>
+      <h6>"Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better." - Samuel Beckett</h6>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img src="pics/MyFace.jpg" alt="My Face" style="width:250px;height:360px;">
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="Portfolio">
+  <div class="w3-content">
+    <div class="w3-third w3-center" id="AtCamp">
+      <img src="pics/AtCamp.jpg" alt="At Camp" style="width:320px;height:340px;">
+    </div>
+
+    <div class="w3-twothird" id="text">
+      <h1>Portfolio</h1>
+      <h5 class="w3-padding-32">I have a bunch of different interests and so I have experience in a couple of different fields. I like to think I'm decent at a these things: graphic design, app development, writing music, and cooking (although some may disagree with the last one).</h5>
+
+      <p class="w3-text-grey">Below is some of my work:</p>
+       
+      <a href="docs/[Untitled].pdf" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">Example Music Score</a>
+      <a href="docs/ER Gridlock.zip" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">ER Gridlock</a>
+      <a href="https://github.com/FertileBean" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">My GitHub</a>
+      <a href="docs/Alain Lou's Resume.pdf" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">My Resume</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity" id="Contact">
+	<h2>Let's Connect</h2>  
+  	<div class="w3-xlarge w3-padding-32">
+  		<a class="fa fa-envelope w3-hover-opacity" href="mailto:loual@utschools.ca"></a>
+    	<a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/FertileBean"></a>
+   		<a class="fa fa-github w3-hover-opacity" href="https://github.com/fertilebean"></a>
+    	<a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/alain-lou-2b8399112/"></a>
+ 	</div>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
