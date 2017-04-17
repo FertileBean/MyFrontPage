@@ -81,17 +81,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <a href="https://github.com/FertileBean" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">My GitHub</a>
       <a href="docs/Alain Lou's Resume.pdf" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">My Resume</a>
     </div>
-    <div>
-    	<script src="http://www.java.com/js/deployJava.js"></script>
-		<script>
-    		var attributes = {
-       	code:'Main.class',
-    		width:700, height:500} ;
-    		var parameters = {}; // does the Applet take parameters?
-    		var version = '1.6' ; // does the Applet require a minimum version of Java
-    		deployJava.runApplet(attributes, parameters, version);
-		</script>
-    </div>	 
+
   </div>
 </div>
 
