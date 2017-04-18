@@ -1,7 +1,7 @@
 @keyframes doit{
 	100% {
 		background-position: 
-			-5000px 20%,
+			-2000px 20%,
 			-800px 80%,
 			1000px 100%;
 	}
