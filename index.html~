@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="script" href="js/pong.js">
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
@@ -77,13 +78,90 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <p class="w3-text-grey">Below is some of my work:</p>
        
       <a href="docs/[Untitled].pdf" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">Music Score</a>
-      <a href="docs/ER Gridlock.zip" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">ER Gridlock</a>
+      <a href="docs/ER Gridlock.zip" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">GridlockED</a>
       <a href="docs/Envision City.zip" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">Envision City</a>
-      <a href="https://github.com/FertileBean" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">My GitHub</a>
-      <a href="docs/Alain Lou's Resume.pdf" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">My Resume</a>
+      <a href="https://github.com/FertileBean" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">GitHub</a>
+      <a href="docs/Alain Lou's Resume.pdf" class="w3-bar-item w3-button w3-red w3-hide-small w3-padding-large w3-hover-white">Resume</a>
     
     </div>
+	 <canvas id="gc" width="640" height="480">
+	 </canvas>
+	 <script>
+	 p1y=p2y=40;
+pt=10;
+ph=100
+bx=by=50;
+bd=6
+xv=yv=4;
+score1=score2=0;
+ais = 2;
 
+window.onload=function(){
+	c = document.getElementByID('gc');
+	cc = c.getContext('2d');
+	setInterval(update, 1000/30);
+	c.addEventListener('mousemove',function(e){
+		p1y = e.clientY-ph/2;
+	});
+}
+
+function reset(){
+	bx = c.width/2
+	by = c.height/2
+	x
+}
+
+function update(){
+	bx += xv;
+	by += yv;
+	if(by<0 && yv<0){
+		yv = -yv
+	}	
+	
+	if(by>c.height && yv>0){
+		yv = -yv
+	}	
+	
+	if(bx<0){
+		if(by>p2y && by<p1y+ph){
+			xv = -xv;
+			dy = by-(p1y+ph/2);
+			yv = dy*0.3;
+		}
+		else{
+			score2++;
+			reset();
+		}
+	}
+	if(bx>c.width){
+		if(by>p2y && by<p2y+ph){
+			xv = -xv;
+			dy = by-(p2y+ph/2);
+			yv = dy*0.3;
+		}
+		else{
+			score1++;
+			reset();
+		}
+	}		
+	
+	if(p2y+ph/2<by){
+		p2y+=ais;
+	}
+	else{
+		p2y-=ais
+	}
+	cc.fillStyle='black';
+	cc.fillRect(0,0,c.width,c.height);
+	cc.fillStyle='white';
+	cc.fillRect(0,p1y,pt,ph);
+	cc.fillRect(c.width-pt,p2y,pt,ph);
+	cc.fillRect(bx-bd/2, by-bd/2, bd, bd);
+	cc.fillText(score1, 100, 100);
+	cc.fillText(score2,c.width - 100, 100);	
+}
+	 </script>
+	 
   </div>
 </div>
 
