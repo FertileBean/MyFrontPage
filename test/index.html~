@@ -1,4 +1,12 @@
 <script>
+window.addEventListener ("load", function () {
+	var input = document.getElementById('1');
+
+	input.addEventListener("keydown", function () {
+		//alert(this.selectionStart);
+	});
+});
+
 function setInput(button) {
    var buttonVal = button.value;
    var textbox = document.getElementById('1');
