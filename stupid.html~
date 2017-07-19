@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html>
-<body>
-<canvas id="gc" width="640" height="480">
-</canvas>
-<script src="js/pong.js">
-</script>
-</body>
-</html>
