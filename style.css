@@ -1,0 +1,45 @@
+@keyframes doit{
+	100% {
+		background-position: 
+			-2000px 20%,
+			-800px 80%,
+			1000px 100%;
+	}
+}
+
+h2, h3, h4, h5, h6{
+	display: inline;
+}
+
+#Special{
+	width: 100%;
+}
+#MyVideo{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+#MyName{
+	color: light-grey;
+	font-weight:bold;
+	font-size:80px;
+	text-decoration: none;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: grey;
+	-webkit-transition: all .8s;
+	-moz-transition: all .8s;
+}
+
+#MyName:hover{
+	color: whitesmoke;
+	-webkit-text-stroke-color: black;
+	font-size: 85px;
+}
+
+#text{
+	padding-left: 30px;
+}
+
