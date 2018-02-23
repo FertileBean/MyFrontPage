@@ -3,13 +3,13 @@
 
 <body>
 	<h1 id="days"></h1>
-	<h1 id="ha!"></h1>
 	<!--
 	<h1>days until the end of school!</h1>
 	-->
 	<script>
 	var today = new Date();
 	var numDays = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365];
+	var messages = ["days until the end!"];
 	var n = numDays[today.getMonth()] + today.getDate();
 	var end = 173;
 	document.getElementById("days").innerHTML = end-n;
