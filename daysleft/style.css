@@ -1,0 +1,30 @@
+@keyframes shift{
+	from{font-size: 50px;}
+	to{font-size: 150px;}
+}
+
+h1{
+	font-family: helvetica;
+	color: white;
+	text-align:center;
+}
+
+#days{
+	font-size: 150px;
+	animation: shift 4s;
+}
+
+body{
+	background: black;
+}
+
+body div{
+	position: relative;
+}
+
+#thingInTheMiddle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

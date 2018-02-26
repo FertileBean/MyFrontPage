@@ -4,7 +4,7 @@
 
 <body>
 	<div id="thingInTheMiddle">
-		<h1 id="days">temp</h1>
+		<h1 id="days"></h1>
 		<h1 id="message"></h1>
 	</div>
 	
@@ -17,14 +17,14 @@
 	var end = 173;
 	var daysIn = n-start;
 	var daysLeft = end-n;
-	/**if(daysLeft > 0 && ((n > start && n < 366)|| (n < end && n >0))){
+	if(daysLeft > 0 && ((n > start && n < 366)|| (n < end && n >0))){
 		document.getElementById("days").innerHTML = daysLeft;
 		document.getElementById("message").innerHTML = messages[parseInt(Math.random() * messages.length)];
 	}
 	else{
 		document.getElementById("days").innerHTML = "It's over!";
 		document.getElementById("message").innerHTML = "See ya losers!";
-	}**/	
+	}
 	</script>
 	
 </body>
