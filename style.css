@@ -1,12 +1,3 @@
-@keyframes doit{
-	100% {
-		background-position: 
-			-2000px 20%,
-			-800px 80%,
-			1000px 100%;
-	}
-}
-
 html, body{
 	height: 100%;
 	width: 100%;

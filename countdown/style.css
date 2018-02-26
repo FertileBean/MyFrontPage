@@ -1,1 +1,12 @@
+@keyframes shift{
+	from{opacity: 0; top: 50px;}
+	to{opacity: 1; top: 0px;}
+}
 
+h1{
+	position: relative;
+	font-family: helvetica;
+	color: black;
+	text-align:center;
+	animation: shift 4s;
+}
