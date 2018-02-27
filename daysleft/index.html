@@ -1,30 +1,19 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="res/pics/favicon.ico" />
 </head>
 
 <body>
-	<div id="thingInTheMiddle">
-		<h1 id="days"></h1>
-		<h1 id="message"></h1>
+	<div id="space">
+		<div class="stars"></div>
+		<div class="stars"></div>
+		<div class="stars"></div>
+		<div class="stars"></div>
+		<div class="stars"></div>
 	</div>
-	
-	<script>
-	var today = new Date();
-	var numDays = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365];
-	var messages = ["days until the end!", "days left in this prison!", "days left until we become adults!"];
-	var n = numDays[today.getMonth()] + today.getDate();
-	var start = 243;
-	var end = 173;
-	var daysIn = n-start;
-	var daysLeft = end-n;
-	if(daysLeft > 0 && ((n > start && n < 366)|| (n < end && n >0))){
-		document.getElementById("days").innerHTML = daysLeft;
-		document.getElementById("message").innerHTML = messages[parseInt(Math.random() * messages.length)];
-	}
-	else{
-		document.getElementById("days").innerHTML = "It's over!";
-		document.getElementById("message").innerHTML = "See ya losers!";
-	}
-	</script>
-	
+		<div id="thingInTheMiddle">
+			<h1 id="days"></h1>
+			<h1 id="message"></h1>
+		</div>
+	<script src = "getNumber.js"></script>
 </body>
