@@ -8,4 +8,4 @@ Things I tested here:
 
 * [Subscript](http://alainlou.com/subscript), a text input box that supports UTF-8 (mostly for Google Chrome and Firefox) subscript input (buttons and also converting any inputted number into its subscript from). This was used as part of a learning platform to help with inputting molecular formulas.
 
-[]![Subscript Screenshot](https://github.com/alainlou/alainlou.github.io/blob/master/res/pics/subscript_sample.PNG)](http://alainlou.com/subscript)
+[![Subscript Screenshot](https://github.com/alainlou/alainlou.github.io/blob/master/res/pics/subscript_sample.PNG)](http://alainlou.com/subscript)
