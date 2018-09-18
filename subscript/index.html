@@ -1,0 +1,74 @@
+<script>
+String.prototype.replaceAll = function(search, replacement){
+	var target = this;
+	return target.replace(new RegExp(search, 'g'), replacement);
+};
+function setInput(button) {
+   var buttonVal = button.value;
+   var textbox = document.getElementById('input');//inefficient
+   var pos = textbox.selectionStart;//inefficient
+   textbox.value = textbox.value.substring(0, pos) + buttonVal + textbox.value.substring(pos);
+}
+function check(event){
+	var subscripts = ["₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"];
+	var textbox = document.getElementById('input');//inefficient
+	/**var pos = textbox.selectionStart;//inefficient
+	var temp = event.which || event.keyCode;
+	if(temp == 48){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[0]+ textbox.value.substring(pos);
+	}
+	else if(temp == 49){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[1] + textbox.value.substring(pos);
+	}
+	else if(temp == 50){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[2] + textbox.value.substring(pos);
+	}
+	else if(temp == 51){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[3] + textbox.value.substring(pos);
+	}
+	else if(temp == 52){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[4] + textbox.value.substring(pos);
+	}
+	else if(temp == 53){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[5] + textbox.value.substring(pos);
+	}
+	else if(temp == 54){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[6] + textbox.value.substring(pos);
+	}
+	else if(temp == 55){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[7] + textbox.value.substring(pos);
+	}
+	else if(temp == 56){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[8] + textbox.value.substring(pos);
+	}
+	else if(temp == 57){
+		textbox.value = textbox.value.substring(0, pos-1) + subscripts[9] + textbox.value.substring(pos);
+	}**/
+	temp = textbox.value.replace("0", subscripts[0]);
+	temp = temp.replaceAll("1", subscripts[1]);
+	temp = temp.replaceAll("2", subscripts[2]);
+	temp = temp.replaceAll("3", subscripts[3]);
+	temp = temp.replaceAll("4", subscripts[4]);
+	temp = temp.replaceAll("5", subscripts[5]);
+	temp = temp.replaceAll("6", subscripts[6]);
+	temp = temp.replaceAll("7", subscripts[7]);
+	temp = temp.replaceAll("8", subscripts[8]);
+	temp = temp.replaceAll("9", subscripts[9]);
+	textbox.value  = temp;
+	//TODO move by arrow keys bug
+}
+</script>
+
+<input type="text" id="input" onkeyup="check(event); return false;"></input>
+<br></br>
+<input type="submit" value = "₀" onclick="setInput(this); return false;">
+<input type="submit" value = "₁" onclick="setInput(this); return false;">
+<input type="submit" value = "₂" onclick="setInput(this); return false;">
+<input type="submit" value = "₃" onclick="setInput(this); return false;">
+<input type="submit" value = "₄" onclick="setInput(this); return false;">
+<input type="submit" value = "₅" onclick="setInput(this); return false;">
+<input type="submit" value = "₆" onclick="setInput(this); return false;">
+<input type="submit" value = "₇" onclick="setInput(this); return false;">
+<input type="submit" value = "₈" onclick="setInput(this); return false;">
+<input type="submit" value = "₉" onclick="setInput(this); return false;">
+<p id="stupid"></p>
