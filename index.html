@@ -110,25 +110,28 @@ function myFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-//event listener
+//scroll to home
   window.addEventListener('load', function() {
     document.querySelector('.home').addEventListener('click', function(e) {
       e.preventDefault();
       window.scrollTo({ top: document.body.clientHeight - window.innerHeight, left: 0, behavior: 'smooth' });
     })
   })
+  //scroll to about-me
   window.addEventListener('load', function() {
     document.querySelector('.about-me').addEventListener('click', function(e) {
       e.preventDefault();
       document.querySelector('.AboutMe').scrollIntoView({behavior: 'smooth'});
     })
   })
+  //scroll to portfolio
   window.addEventListener('load', function() {
     document.querySelector('.my-stuff').addEventListener('click', function(e) {
       e.preventDefault();
       document.querySelector('.stuff').scrollIntoView({behavior: 'smooth'});
     })
   })
+  //scroll to bottom
   window.addEventListener('load', function() {
     document.querySelector('.connect').addEventListener('click', function(e) {
       e.preventDefault();
