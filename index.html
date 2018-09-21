@@ -27,10 +27,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#Special" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#AboutMe" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Me</a>
-    <a href="#Portfolio" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Portfolio</a>
-    <a href="#Contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Let's Connect</a>
+    <button class="w3-bar-item w3-button w3-padding-large w3-white home">Home</button>
+    <button class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white about-me">About Me</button>
+    <button class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white my-stuff">Portfolio</button>
+    <button class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white connect">Let's Connect</button>
   </div>
 
   <!-- Navbar on small screens -->
@@ -54,7 +54,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <div>
 <!-- First Grid -->
-  <div class="w3-row-padding w3-padding-64 w3-container w3-white"  id="AboutMe">
+  <div class="w3-row-padding w3-padding-64 w3-container w3-white AboutMe"  id="AboutMe">
     <div class="w3-content">
       <div class="w3-twothird">
         <h1>About Me</h1>
@@ -70,7 +70,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 
   <!-- Second Grid -->
-  <div class="w3-row-padding w3-padding-64 w3-container w3-light-grey" id="Portfolio">
+  <div class="w3-row-padding w3-padding-64 w3-container w3-light-grey stuff" id="Portfolio">
     <div class="w3-content">
       <div class="w3-third w3-center" id="AtCamp">
         <img src="res/pics/AtCamp.jpg" alt="At Camp" style="width:320px;height:340px;">
@@ -90,7 +90,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-center w3-opacity w3-light-grey" id="Contact">
+<footer class="w3-container w3-padding-32 w3-center w3-opacity w3-light-grey cinfo" id="Contact">
 	<h2>Let's Connect</h2>
   	<div class="w3-xlarge w3-padding-32">
   		<a class="fa fa-envelope w3-hover-opacity" href="mailto:alain.zeyu.lou@edu.uwaterloo.ca"></a>
@@ -110,6 +110,31 @@ function myFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+//event listener
+  window.addEventListener('load', function() {
+    document.querySelector('.home').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: document.body.clientHeight - window.innerHeight, left: 0, behavior: 'smooth' });
+    })
+  })
+  window.addEventListener('load', function() {
+    document.querySelector('.about-me').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.AboutMe').scrollIntoView({behavior: 'smooth'});
+    })
+  })
+  window.addEventListener('load', function() {
+    document.querySelector('.my-stuff').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.stuff').scrollIntoView({behavior: 'smooth'});
+    })
+  })
+  window.addEventListener('load', function() {
+    document.querySelector('.connect').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.cinfo').scrollIntoView({behavior: 'smooth'});
+    })
+  })
 </script>
 
 </body>
