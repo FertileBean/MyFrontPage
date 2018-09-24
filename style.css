@@ -37,7 +37,7 @@ h2, h3, h4, h5, h6{
 	font-weight:bold;
 	font-size:100px;
 	text-decoration: none;
-	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-width: 0.02em;
 	-webkit-text-stroke-color: grey;
 	-webkit-transition: all .8s;
 	-moz-transition: all .8s;
