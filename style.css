@@ -35,10 +35,9 @@ h2, h3, h4, h5, h6{
 #MyName{
 	color: light-grey;
 	font-weight:bold;
-	font-size:100px;
+	font-size: 6.5rem;
 	text-decoration: none;
-	-webkit-text-stroke-width: 0.02em;
-	-webkit-text-stroke-color: grey;
+	-webkit-text-stroke: 0.0001rem grey;
 	-webkit-transition: all .8s;
 	-moz-transition: all .8s;
 }
@@ -46,7 +45,7 @@ h2, h3, h4, h5, h6{
 #MyName:hover{
 	color: whitesmoke;
 	-webkit-text-stroke-color: black;
-	font-size: 105px;
+	font-size: 7rem;
 }
 
 #text{
